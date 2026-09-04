@@ -2,7 +2,17 @@
 
 面向 **Waveshare ESP32-S3-Touch-LCD-4B** 的非官方 Codex Micro 兼容项目，由 Jhckevin 维护。
 
-![设备经典界面](docs/images/classical-framebuffer.png)
+## 界面预览
+
+下图为固件真实帧缓冲采集；它能展示 UI 布局，但不能展示真实背光、面板撕裂或动画帧率。
+
+![设备经典界面实机帧缓冲](docs/images/classical-framebuffer.png)
+
+下面两张来自客户端内置 QA 模拟设备，用于展示管理界面，不代表 USB、BLE 或更新已在实机执行。
+
+| 分层、键帽与映射 | 更新流程 |
+|---|---|
+| ![桌面客户端分层与键帽模拟界面](docs/images/desktop-layers-simulator.png) | ![桌面客户端更新页模拟界面](docs/images/desktop-updates-simulator.png) |
 
 项目分为三部分：
 
