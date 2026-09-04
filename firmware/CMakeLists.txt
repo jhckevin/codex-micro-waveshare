@@ -1,0 +1,30 @@
+cmake_minimum_required(VERSION 3.16)
+
+include($ENV{IDF_PATH}/tools/cmake/project.cmake)
+if(DEFINED CODEX_DEPENDENCIES_LOCK)
+    idf_build_set_property(DEPENDENCIES_LOCK "${CODEX_DEPENDENCIES_LOCK}")
+endif()
+project(codex_micro_waveshare)
+
+if(CONFIG_SECURE_BOOT OR CONFIG_SECURE_FLASH_ENC_ENABLED)
+    message(FATAL_ERROR "Source-only distribution does not enable eFuse-backed security")
+endif()
+
+# LVGL 9.2.0 upstream calls lv_draw_sw_deinit twice. Preserve the tested fix
+# without modifying the component-manager cache or copying demos/assets.
+idf_component_get_property(lvgl_library lvgl__lvgl COMPONENT_LIB)
+get_target_property(lvgl_sources ${lvgl_library} SOURCES)
+set(lvgl_replaced FALSE)
+set(lvgl_fixed_sources "")
+foreach(source IN LISTS lvgl_sources)
+    if(source MATCHES "(^|/)lv_init[.]c$")
+        list(APPEND lvgl_fixed_sources "${CMAKE_CURRENT_SOURCE_DIR}/third_party/lvgl_init_patch/lv_init.c")
+        set(lvgl_replaced TRUE)
+    else()
+        list(APPEND lvgl_fixed_sources "${source}")
+    endif()
+endforeach()
+if(NOT lvgl_replaced)
+    message(FATAL_ERROR "LVGL initialization source not found; review pinned dependency")
+endif()
+set_property(TARGET ${lvgl_library} PROPERTY SOURCES "${lvgl_fixed_sources}")

@@ -1,0 +1,32 @@
+config CODEX_OPEN_SOURCE_BUILD
+    bool
+    default y
+    help
+        Source-only build: no device-bound encrypted update service.
+
+config CODEX_RECOVERY_PATH_PROVEN
+    bool
+    default y
+    help
+        Enables the native USB Codex HID/CDC identity only after a forced ROM
+        download through BOOT/GPIO0 or the separate CH343/UART0 path has been
+        proven on the target board. This option is intentionally not writable
+        through NVS, CDC, BLE, or the on-device menu.
+
+config CODEX_DEVELOPMENT_HIL
+    bool "Enable development-only UART HIL and display diagnostics"
+    default n
+    help
+        Adds the @hil UART0 command plane, raw RGB565 framebuffer sampling,
+        VSYNC timing telemetry, and automated input injection. Production
+        builds must leave this disabled; all related sources and hooks are then
+        removed at compile time.
+
+config CODEX_CHARGE_MAX_MA
+    int "Validated battery charge ceiling (mA)"
+    range 200 1200
+    default 200
+    help
+        Factory-safe source default is 200 mA. Higher settings require a
+        suitable single-cell battery, input supply and thermal validation.
+        PMIC die protection is not battery temperature monitoring.

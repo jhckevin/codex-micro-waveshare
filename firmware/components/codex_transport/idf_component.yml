@@ -1,0 +1,3 @@
+dependencies:
+  espressif/esp_tinyusb: "^1.7.6"
+  idf: ">=5.4.2,<5.5"

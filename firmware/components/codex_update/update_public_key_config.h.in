@@ -1,0 +1,14 @@
+#pragma once
+
+#include <cstddef>
+#include <cstdint>
+
+namespace codex {
+
+inline constexpr std::uint8_t kConfiguredUpdatePublicKeyDer[] = {
+    @CODEX_UPDATE_PUBLIC_KEY_BYTES@
+};
+inline constexpr std::size_t kConfiguredUpdatePublicKeyDerSize =
+    sizeof(kConfiguredUpdatePublicKeyDer);
+
+}  // namespace codex

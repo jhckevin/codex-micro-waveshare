@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  desktop:
+    runs-on: windows-2022
+    defaults:
+      run:
+        working-directory: desktop
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: desktop/package-lock.json
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+      - name: Build native helpers
+        shell: powershell
+        run: ./native/build.ps1
+
+  firmware-host-tests:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run pure C++ tests
+        working-directory: firmware
+        run: bash tests/host/run-linux.sh
+
+  firmware-build:
+    runs-on: ubuntu-24.04
+    container: espressif/idf:v5.4.2
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build ESP32-S3 firmware
+        working-directory: firmware
+        run: idf.py set-target esp32s3 && idf.py build

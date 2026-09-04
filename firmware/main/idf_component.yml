@@ -1,0 +1,12 @@
+dependencies:
+  idf:
+    version: ">=5.4.2,<5.5"
+  waveshare/esp32_s3_touch_lcd_4b:
+    version: "1.1.1"
+    override_path: "../third_party/waveshare__esp32_s3_touch_lcd_4b"
+  espressif/esp_lvgl_port:
+    version: "2.7.2"
+    override_path: "../third_party/espressif__esp_lvgl_port"
+  lvgl/lvgl:
+    version: "9.2.0"
+    public: true

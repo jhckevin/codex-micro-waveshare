@@ -1,0 +1,17 @@
+**/node_modules/
+**/dist-electron/
+**/dist-renderer/
+**/dist-windows/
+firmware/build*/
+firmware/managed_components/
+firmware/sdkconfig
+firmware/sdkconfig.old
+**/__pycache__/
+**/*.pyc
+desktop/native/out/
+**/.env
+**/.env.*
+**/*.pem
+**/*.key
+
+**/node_modules

@@ -1,0 +1,57 @@
+{
+  "name": "codex-micro-control",
+  "version": "1.0.1",
+  "private": true,
+  "description": "Independent device manager and layer editor for Codex Micro-compatible hardware",
+  "author": {
+    "name": "Jhckevin"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/jhckevin/codex-micro-waveshare",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jhckevin/codex-micro-waveshare.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jhckevin/codex-micro-waveshare/issues"
+  },
+  "main": "dist-electron/main/main.js",
+  "scripts": {
+    "test": "vitest run",
+    "build:main": "tsc -p tsconfig.main.json",
+    "typecheck:renderer": "tsc -p tsconfig.renderer.json",
+    "build:renderer": "vite build",
+    "build": "npm run build:main && npm run typecheck:renderer && npm run build:renderer",
+    "dist:win": "electron-builder --win nsis portable --x64 --config electron-builder.yml"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "4.7.0",
+    "lucide-react": "0.468.0",
+    "node-hid": "3.2.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "electron-updater": "6.8.9",
+    "wouter": "3.10.0",
+    "vite": "7.3.6"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.1.18",
+    "@testing-library/react": "16.3.1",
+    "@types/node": "24.10.1",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "jsdom": "27.4.0",
+    "tailwindcss": "4.1.18",
+    "electron": "43.2.0",
+    "electron-builder": "26.15.3",
+    "typescript": "5.9.3",
+    "vitest": "4.1.10"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "overrides": {
+    "brace-expansion": "5.0.9",
+    "esbuild": "0.28.1"
+  }
+}

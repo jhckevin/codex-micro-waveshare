@@ -1,0 +1,57 @@
+appId: cn.whatcanisay.codexmicro.control
+productName: Codex Micro Control
+copyright: Copyright © 2026 Jhckevin
+asar: true
+electronFuses:
+  runAsNode: false
+  enableCookieEncryption: true
+  enableNodeOptionsEnvironmentVariable: false
+  enableNodeCliInspectArguments: false
+  enableEmbeddedAsarIntegrityValidation: true
+  onlyLoadAppFromAsar: true
+directories:
+  buildResources: build
+  output: dist-windows
+files:
+  - dist-electron/**
+  - dist-renderer/**
+  - package.json
+  - node_modules/node-addon-api/**
+  - node_modules/node-hid/**
+  - "!node_modules/node-hid/hidapi/hidtest/**"
+  - "!node_modules/node-hid/hidapi/testgui/**"
+  - "!node_modules/node-hid/hidapi/windows/test/**"
+  - node_modules/pkg-prebuilds/**
+  - build/app-icon.png
+extraResources:
+  - from: build/app-icon.png
+    to: build/app-icon.png
+  - from: native/out/codex-input-helper.exe
+    to: native/codex-input-helper.exe
+  - from: native/out/codex-ble-helper.exe
+    to: native/codex-ble-helper.exe
+  - from: native/codex-usb-cdc-helper.ps1
+    to: native/codex-usb-cdc-helper.ps1
+win:
+  icon: build/app-icon.png
+  target:
+    - target: portable
+      arch:
+        - x64
+    - target: nsis
+      arch:
+        - x64
+  requestedExecutionLevel: asInvoker
+portable:
+  artifactName: Codex-Micro-Control-${version}-win-x64-portable.${ext}
+nsis:
+  artifactName: Codex-Micro-Control-${version}-win-x64-setup.${ext}
+  oneClick: false
+  perMachine: false
+  allowElevation: true
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  runAfterFinish: true
+  deleteAppDataOnUninstall: false
+publish: null
