@@ -48,7 +48,7 @@ Desktop 是独立子项目，可以单独安装依赖、测试和构建；它不
 |---|---|---|
 | ![底座内部](docs/images/hardware/base-interior.jpg) | ![底座底面](docs/images/hardware/base-bottom.jpg) | ![设备安装到底座](docs/images/hardware/device-on-base.jpg) |
 
-模型、打印方向、螺丝组合和装配注意事项见 [hardware/README.md](hardware/README.md)。工程模型以 Fusion 360 原生文件保留，并配套 STL 供自行切片。
+模型、打印方向、螺丝组合和装配注意事项见 [hardware/README.md](hardware/README.md)。可直接取得 [Fusion 360 v0.9 工程](hardware/models/Waveshare_86_21deg_v0.9_CODEX_DRAFT.f3d) 和 [v0.9 STL](hardware/print-files/Waveshare_86_21deg_v0.9_CODEX_FITCHECK.stl)，请在正式打印前自行切片并核对公差。
 
 ## 硬件与电池
 
@@ -59,7 +59,13 @@ Desktop 是独立子项目，可以单独安装依赖、测试和构建；它不
 - USB TO UART 用于刷写、日志和恢复；原生 USB 用于日常 Codex/配置通信
 - 板载 PWR、BOOT 和 CHG LED；CHG LED 保持微雪原生硬件逻辑，本项目不重定义
 
-当前电池档案为 **606080、ATL A 类、3.7 V、4000 mAh / 14.8 Wh、带智能 IC 保护板**。固件把 AXP2101 软件充电上限限制为 **1.2 A**；更换电池时必须先按新电池资料重新评估。
+当前电池档案为 **606080、ATL A 类、3.7 V、4000 mAh / 14.8 Wh、带智能 IC 保护板**。固件把 AXP2101 软件充电上限限制为 **1.2 A**；按 4.2 V × 1.2 A 计算，电池侧理论峰值约 **5.0 W**，实际功率会受升流、恒压收尾、输入能力和整机负载影响。更换电池时必须先按新电池资料重新评估。
+
+## 已知硬件与功耗局限
+
+- 4 英寸 RGB 屏幕、背光、持续动画、ESP32-S3、BLE 与音频会带来较高耗电；智能屏保、Connected standby、Ultra standby 和自动关机是必要的节电设计，不应把常亮续航当作低功耗设备水平。
+- 受当前主板屏幕/背光集成方式限制，项目尚未确认存在可由固件可靠控制的独立硬件背光断电接口。Standby 会停止绘制、显示黑色并把可控输出压到最低，但暗室中仍可能看到极微弱蓝光，**不能承诺与物理断电完全一致**。
+- 充电配置上限为 1.2 A，电池侧理论峰值约 5.0 W；USB 输入功率、设备自身耗电和电池实际吸收功率不是同一个指标。
 
 ## 当前版本的加密状态
 
@@ -102,4 +108,6 @@ npm run build
 
 ## 许可
 
-项目代码使用 MIT License；第三方组件、名称、图标和素材遵循各自许可与权利声明。参见 [LICENSE](LICENSE) 和 [firmware/NOTICE.md](firmware/NOTICE.md)。
+本仓库采用混合许可：Jhckevin 自 2026-09-05 起首次发布且独立拥有的新增原创内容采用 [PolyForm Noncommercial 1.0.0](LICENSES/PolyForm-Noncommercial-1.0.0.md)，**禁止商业用途**；上游、第三方内容以及已经按 MIT 发布的历史版本继续适用原授权，既有 MIT 权利不会被追溯撤销。商业使用新增原创部分需另行取得 Jhckevin 的书面许可。
+
+因此本项目是“源码可用/源码公开”，不属于 OSI 定义的开源软件。具体边界见 [LICENSE](LICENSE)、[许可证说明](LICENSES/README.zh-CN.md) 和 [firmware/NOTICE.md](firmware/NOTICE.md)。

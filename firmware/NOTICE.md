@@ -6,11 +6,19 @@ Copyright (c) 2026 imliubo.
 Copyright (c) 2026 Jhckevin for subsequent modifications and original
 Codex Micro Control components.
 
-Unless a file states otherwise, the original source code and documentation in
-this repository are licensed under the [MIT License](LICENSE).
+This firmware contains material under more than one license. Code derived from
+imliubo/codex-micro-4-core2, earlier MIT releases, and third-party components
+remains under its applicable upstream license; see
+[MIT upstream and prior release](../LICENSES/MIT-upstream-and-prior-release.md),
+component license files, and source headers.
 
-The MIT License applies only to material owned by this project's copyright
-holder. It does not grant rights to third-party trademarks, product names,
+Jhckevin original material first published on or after 2026-09-05 is covered by
+the repository's mixed-license notice and, where exclusively owned by
+Jhckevin, the PolyForm Noncommercial License 1.0.0. Commercial use of that new
+material requires a separate written license. Previously granted MIT rights are
+not revoked.
+
+No software license grants rights to third-party trademarks, product names,
 logos, hardware designs, firmware, protocols, libraries, or other intellectual
 property.
 

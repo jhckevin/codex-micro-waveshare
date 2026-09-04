@@ -6,9 +6,12 @@
 
 ## 文件
 
-- `models/`：Fusion 360 原生工程文件。
-- `print-files/`：用于切片和试装的 STL。
-- 文档中的版本号必须与文件名一致；不要把早期备份当成最终打印件。
+- [Fusion 360 v0.9 工程](models/Waveshare_86_21deg_v0.9_CODEX_DRAFT.f3d)
+- [v0.9 STL](print-files/Waveshare_86_21deg_v0.9_CODEX_FITCHECK.stl)
+- 文件名中的 DRAFT / FITCHECK 是建模过程保留的历史命名；维护者已明确授权这两个 v0.9 文件作为本次公开版本。
+- STL：4,548,984 bytes，90,978 个三角面，SHA-256 33d121e8064ad8cb22c31c84e95b7291f0289c11523b97ddd03f04621f1fe7ce。
+- F3D：SHA-256 04d9314d401abf4a826b2721e3d105f4f3566fac5a351ae350b166f19bf2b2cf。
+- 即使版本号一致，也必须先切片预览、空载试装并核对打印公差。
 
 ## 电池仓
 
