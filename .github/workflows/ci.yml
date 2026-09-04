@@ -23,6 +23,7 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run build
+      - uses: ilammy/msvc-dev-cmd@v1
       - name: Build native helpers
         shell: powershell
         run: ./native/build.ps1
@@ -42,4 +43,5 @@ jobs:
       - uses: actions/checkout@v4
       - name: Build ESP32-S3 firmware
         working-directory: firmware
-        run: idf.py set-target esp32s3 && idf.py build
+        shell: bash
+        run: source /opt/esp/idf/export.sh >/dev/null 2>&1 && idf.py set-target esp32s3 && idf.py build
