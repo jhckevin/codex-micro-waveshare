@@ -15,3 +15,5 @@ desktop/native/out/
 **/*.key
 
 **/node_modules
+
+firmware/dependencies.lock

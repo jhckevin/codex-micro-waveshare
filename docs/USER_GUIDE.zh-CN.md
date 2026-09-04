@@ -295,7 +295,7 @@ Arcade 是可选特殊界面，不是独立游戏主机。触发能否在 Codex 
 | electron-builder | 26.15.3 |
 | 路由 | wouter 3.10.0 |
 
-以 dependencies.lock、main/idf_component.yml 和 package-lock.json 为复现依据。不要把 third_party 补丁目录替换为未修改的上游组件。
+固件依赖版本由 `main/idf_component.yml` 与 `third_party/` 本地 override 固定，客户端依赖由 `package-lock.json` 固定。ESP-IDF 会在首次构建时生成含本机绝对 override 路径的 `dependencies.lock`，因此该文件不纳入版本库。不要把 `third_party/` 补丁目录替换为未修改的上游组件。
 
 ## 25. 构建固件
 
