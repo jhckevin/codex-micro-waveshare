@@ -10,7 +10,7 @@ To the extent a file or contribution is owned exclusively by Jhckevin and was fi
 
 ## Upstream, third-party, and earlier grants
 
-Code derived from imliubo/codex-micro-4-core2 and other third-party material remains under its applicable upstream license. See [LICENSES/MIT-upstream-and-prior-release.md](LICENSES/MIT-upstream-and-prior-release.md), [firmware/NOTICE.md](firmware/NOTICE.md), component license files, and source headers.
+Upstream-derived and other third-party material remains under its applicable license. See [LICENSES/MIT-upstream-and-prior-release.md](LICENSES/MIT-upstream-and-prior-release.md), [firmware/NOTICE.md](firmware/NOTICE.md), component license files, and source headers.
 
 Versions of this repository already published under the MIT License remain usable under that prior grant. Changing the license for later Jhckevin contributions does not revoke rights already received, and does not relicense copyright owned by other authors.
 

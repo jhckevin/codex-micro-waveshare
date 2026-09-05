@@ -6,8 +6,7 @@ Copyright (c) 2026 imliubo.
 Copyright (c) 2026 Jhckevin for subsequent modifications and original
 Codex Micro Control components.
 
-This firmware contains material under more than one license. Code derived from
-imliubo/codex-micro-4-core2, earlier MIT releases, and third-party components
+This firmware contains material under more than one license. Upstream-derived code, earlier MIT releases, and third-party components
 remains under its applicable upstream license; see
 [MIT upstream and prior release](../LICENSES/MIT-upstream-and-prior-release.md),
 component license files, and source headers.
