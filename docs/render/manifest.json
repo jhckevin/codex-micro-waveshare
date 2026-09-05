@@ -1,0 +1,195 @@
+{
+  "source_commit": "745131c6fbf5df76b85af9634f1bc2793e459f0b",
+  "note": "Documentation-only host renders; simulated values, not hardware validation.",
+  "images": [
+    {
+      "path": "docs/images/embedded/arcade-dpad.png",
+      "kind": "embedded",
+      "width": 480,
+      "height": 480,
+      "sha256": "84d81c4a22d6e01fd725d07e189b0a6790f33ee0505d5307d02cda029462b02b"
+    },
+    {
+      "path": "docs/images/embedded/arcade-enter.png",
+      "kind": "embedded",
+      "width": 480,
+      "height": 480,
+      "sha256": "c02f767e095629b90c58cfbc56813b9771652b6723ebb72c355e33a6f75d43c0"
+    },
+    {
+      "path": "docs/images/embedded/arcade-exit.png",
+      "kind": "embedded",
+      "width": 480,
+      "height": 480,
+      "sha256": "d8ad7ed988ef845d93f2cf4a382488e57e6911ff5b9e1929f99d3eb12ffe7af8"
+    },
+    {
+      "path": "docs/images/embedded/arcade-joystick.png",
+      "kind": "embedded",
+      "width": 480,
+      "height": 480,
+      "sha256": "85ca61c6444cf88f514c6b8bb66a3de9136edc6e149c75cd5673cd48498bbe01"
+    },
+    {
+      "path": "docs/images/embedded/arcade-touch.png",
+      "kind": "embedded",
+      "width": 480,
+      "height": 480,
+      "sha256": "d8ad7ed988ef845d93f2cf4a382488e57e6911ff5b9e1929f99d3eb12ffe7af8"
+    },
+    {
+      "path": "docs/images/embedded/battery-warning.png",
+      "kind": "embedded",
+      "width": 480,
+      "height": 480,
+      "sha256": "3054950d72377a33aadd4ae73d47f6b821dee5c04054a295f72679ef83150b2a"
+    },
+    {
+      "path": "docs/images/embedded/classical.png",
+      "kind": "embedded",
+      "width": 480,
+      "height": 480,
+      "sha256": "eaf6dd1b16e62706e8b79e356eecb0e833ac89e4acae6cae64739e560b10adb2"
+    },
+    {
+      "path": "docs/images/embedded/mic-held.png",
+      "kind": "embedded",
+      "width": 480,
+      "height": 480,
+      "sha256": "9f5ff9240912599462b8b7d4d0e1eff9d83da6fcaaf244201e56d9e2ed7359b8"
+    },
+    {
+      "path": "docs/images/embedded/protected-unlock.png",
+      "kind": "embedded",
+      "width": 480,
+      "height": 480,
+      "sha256": "133beed9903936e60e690e36f1f11c5cfe36fdec1d1d16f0a5e4fd783863143b"
+    },
+    {
+      "path": "docs/images/embedded/settings-1.png",
+      "kind": "embedded",
+      "width": 480,
+      "height": 480,
+      "sha256": "bdba30306826159c01a1bcd046406e41956ab5fd1137450a28be59825261d4a5"
+    },
+    {
+      "path": "docs/images/embedded/settings-2.png",
+      "kind": "embedded",
+      "width": 480,
+      "height": 480,
+      "sha256": "acb2cee88b2c29992f16a005f4aa2ba706c58340f22ce6d4983df0e1fe3aecb8"
+    },
+    {
+      "path": "docs/images/embedded/settings-3.png",
+      "kind": "embedded",
+      "width": 480,
+      "height": 480,
+      "sha256": "720d5b3d712dc104adc11c3b764a8255bfab6e08c5e92cbae1c4d36c26de0bff"
+    },
+    {
+      "path": "docs/images/embedded/settings-no-battery.png",
+      "kind": "embedded",
+      "width": 480,
+      "height": 480,
+      "sha256": "9b7fcd438b164b9a784c0a9abfa476db9556ae6909a1887f6bda6f4c2115c1c4"
+    },
+    {
+      "path": "docs/images/desktop/custom-shortcut.png",
+      "kind": "desktop",
+      "width": 1440,
+      "height": 1100,
+      "sha256": "808a7fdbf15ba9ed9481a1de233ec08381bf33dcb41d26ed3b79ae8b2fe57221"
+    },
+    {
+      "path": "docs/images/desktop/device-connected.png",
+      "kind": "desktop",
+      "width": 1440,
+      "height": 1100,
+      "sha256": "5803a42860cd7765a532d834669e6a3b22a868f36baca4bccd1ccb9b6024d6b1"
+    },
+    {
+      "path": "docs/images/desktop/device-disconnected.png",
+      "kind": "desktop",
+      "width": 1440,
+      "height": 1100,
+      "sha256": "f57ce1285c0059c6f404667361c8d1da4fd2e3e53ad73aa33be0d1ad3476aaae"
+    },
+    {
+      "path": "docs/images/desktop/layer1-mic.png",
+      "kind": "desktop",
+      "width": 1440,
+      "height": 1100,
+      "sha256": "086b62da7ffa3b0018ce827a7154826c9e51b41f52ebd6adae4dc3aa2d4a4e58"
+    },
+    {
+      "path": "docs/images/desktop/layer2-copy.png",
+      "kind": "desktop",
+      "width": 1440,
+      "height": 1100,
+      "sha256": "6c1fa984f05ce546dcb759e589b57d1da4f50ed19338db3dacbf79cc179340e4"
+    },
+    {
+      "path": "docs/images/desktop/mic-typeless.png",
+      "kind": "desktop",
+      "width": 1440,
+      "height": 1100,
+      "sha256": "0d470844c579cb7df19ee6bdc9d2367d1d9068300497f1d3283cb222e663053b"
+    },
+    {
+      "path": "docs/images/desktop/settings-full.png",
+      "kind": "desktop",
+      "width": 1440,
+      "height": 1100,
+      "sha256": "75fd1aa3f59e34ecb9760e4db35e1902b67b10a35d4aa55e87d6366ee2c711fa"
+    },
+    {
+      "path": "docs/images/desktop/update-confirm.png",
+      "kind": "desktop",
+      "width": 1440,
+      "height": 1100,
+      "sha256": "b4f32bc4563d13c5ce3e0bb412047aa67d32d1ba803088886aaef18aa68fda93"
+    },
+    {
+      "path": "docs/images/desktop/updates-idle.png",
+      "kind": "desktop",
+      "width": 1440,
+      "height": 1100,
+      "sha256": "6c8c37321c182c55771e762dca5ec2574d28def7a7094397136e8dff7300bc77"
+    },
+    {
+      "path": "docs/images/diagrams/assembly-parts.png",
+      "kind": "diagrams",
+      "width": 1280,
+      "height": 1080,
+      "sha256": "38a2883e6410b164977f29d48ff979ef4d1d3f9258b717341e00e6e07fe020e4"
+    },
+    {
+      "path": "docs/images/diagrams/classical-map.png",
+      "kind": "diagrams",
+      "width": 1280,
+      "height": 1080,
+      "sha256": "57a5dd11a5c0b609b2580b441664946b788df993c58230d4f58447ee9cd3a43c"
+    },
+    {
+      "path": "docs/images/diagrams/ports-controls.png",
+      "kind": "diagrams",
+      "width": 1280,
+      "height": 1080,
+      "sha256": "6109cf18ee5d54d3413967e266fde95e3fbee05cbac327dd9dfa176c1f3b902a"
+    },
+    {
+      "path": "docs/images/diagrams/routing.png",
+      "kind": "diagrams",
+      "width": 1280,
+      "height": 1080,
+      "sha256": "80a13797f63050840b74725a72e4fde241e7638cdd00aa47eb3ad2abf51bd15f"
+    },
+    {
+      "path": "docs/images/diagrams/side-profile.png",
+      "kind": "diagrams",
+      "width": 1280,
+      "height": 1080,
+      "sha256": "93c4c3c1b7cf07d87e50a0935893c5afdded32ecb9b26833b5e40516c4651e01"
+    }
+  ]
+}
